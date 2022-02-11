@@ -10,7 +10,7 @@ function createInitialGrid() {
         grid.classList.add('grid');
         container.appendChild(grid);
     }
-
+    createPixels();
 }
 
 createInitialGrid();
@@ -48,4 +48,15 @@ button.addEventListener('click', () => {
     const dimension = +prompt("Enter the number of squares of a side in the sketch (up to 100 maximum)", "16");
     checkLength(dimension);
     createSketch(dimension);
+    createPixels();
 });
+
+function createPixels() {
+    for (const child of container.children) {
+        child.addEventListener('mouseover', function(e) {
+            child.classList.remove('grid');
+            child.classList.add('grid-dark');
+            e.stopPropagation();
+        });
+    }
+}

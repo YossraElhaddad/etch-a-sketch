@@ -3,6 +3,12 @@
     --rows: 16;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -16,13 +22,18 @@ body {
     background-color: aquamarine;
     border: 2px solid black;
     padding: 10px;
+    margin: auto;
     grid-template-columns: repeat(var(--columns), auto);
     grid-template-rows: repeat(var(--rows), auto);
 }
 
-.grid {
+.grid,
+.grid-dark {
     border: 1px dotted black;
     padding: 16px;
+}
+
+.grid {
     background-color: white;
 }
 
