@@ -61,7 +61,7 @@ function createPixels() {
             e.stopPropagation();
         });
 
-        child.addEventListener('mousemove', function(e) {
+        child.addEventListener('mouseover', function(e) {
             if (painted) {
                 child.classList.remove('grid');
                 child.classList.add('grid-dark');
