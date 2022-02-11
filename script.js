@@ -52,10 +52,25 @@ button.addEventListener('click', () => {
 });
 
 function createPixels() {
+    let painted = false;
+
     for (const child of container.children) {
-        child.addEventListener('mouseover', function(e) {
-            child.classList.remove('grid');
-            child.classList.add('grid-dark');
+
+        child.addEventListener('mousedown', function(e) {
+            painted = true;
+            e.stopPropagation();
+        });
+
+        child.addEventListener('mousemove', function(e) {
+            if (painted) {
+                child.classList.remove('grid');
+                child.classList.add('grid-dark');
+            }
+            e.stopPropagation();
+        });
+
+        child.addEventListener('mouseup', function(e) {
+            painted = false;
             e.stopPropagation();
         });
     }
