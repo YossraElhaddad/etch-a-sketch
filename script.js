@@ -7,7 +7,7 @@ const initialSize = 16 * 16;
 function createInitialGrid() {
     for (let i = 0; i < initialSize; i++) {
         let grid = document.createElement('div');
-        grid.setAttribute('style', 'border: 1px dotted black; padding: 16px; background-color: white;');
+        grid.classList.add('grid');
         container.appendChild(grid);
     }
 
@@ -29,7 +29,7 @@ function createSketch(length) {
     const size = length * length;
     for (let i = 0; i < size; i++) {
         let grid = document.createElement('div');
-        grid.setAttribute('style', 'border: 1px dotted black; padding: 16px; background-color: white;');
+        grid.classList.add('grid');
         container.appendChild(grid);
     }
     root.style.setProperty('--columns', length);

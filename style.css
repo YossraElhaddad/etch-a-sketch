@@ -20,6 +20,12 @@ body {
     grid-template-rows: repeat(var(--rows), auto);
 }
 
+.grid {
+    border: 1px dotted black;
+    padding: 16px;
+    background-color: white;
+}
+
 .grid-dark {
     background-color: rgb(29, 28, 28);
 }
